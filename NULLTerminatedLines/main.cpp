@@ -1,35 +1,39 @@
-#include<iostream>
+п»ї#include<iostream>
 #include<Windows.h>
-using namespace std;
+
 /*
 TODO:
-Написать функции:
-bool is_palindrome(char str[]);	//Проверяет, является ли строка палиндромом (ого, или, 12321)
-bool is_int_number(char str[]);	//Проверяет, является ли строка целым десятичным числом
-int  to_int_number(char str[]);	//Если строка - десятичное число, то функция возвращает его int-овое значение.
-bool is_bin_number(char str[]);	//Проверяет, является ли строка двоичным числом
-int  bin_to_dec(char str[]);	//Если строка - двоичное число, то функция возвращает его десятичное значение.
-bool is_hex_number(char str[]);	//Проверяет, является ли строка шестнадцатеричным числом
-int  hex_to_dec(char str[]);	//Если строка - шестнадцатеричное число, то функция возвращает его десятичное значение.
+РќР°РїРёСЃР°С‚СЊ С„СѓРЅРєС†РёРё:
+bool is_palindrome(char str[]);	//РџСЂРѕРІРµСЂСЏРµС‚, СЏРІР»СЏРµС‚СЃСЏ Р»Рё СЃС‚СЂРѕРєР° РїР°Р»РёРЅРґСЂРѕРјРѕРј (РѕРіРѕ, РёР»Рё, 12321)
+bool is_int_number(char str[]);	//РџСЂРѕРІРµСЂСЏРµС‚, СЏРІР»СЏРµС‚СЃСЏ Р»Рё СЃС‚СЂРѕРєР° С†РµР»С‹Рј РґРµСЃСЏС‚РёС‡РЅС‹Рј С‡РёСЃР»РѕРј
+int  to_int_number(char str[]);	//Р•СЃР»Рё СЃС‚СЂРѕРєР° - РґРµСЃСЏС‚РёС‡РЅРѕРµ С‡РёСЃР»Рѕ, С‚Рѕ С„СѓРЅРєС†РёСЏ РІРѕР·РІСЂР°С‰Р°РµС‚ РµРіРѕ int-РѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ.
+bool is_bin_number(char str[]);	//РџСЂРѕРІРµСЂСЏРµС‚, СЏРІР»СЏРµС‚СЃСЏ Р»Рё СЃС‚СЂРѕРєР° РґРІРѕРёС‡РЅС‹Рј С‡РёСЃР»РѕРј
+int  bin_to_dec(char str[]);	//Р•СЃР»Рё СЃС‚СЂРѕРєР° - РґРІРѕРёС‡РЅРѕРµ С‡РёСЃР»Рѕ, С‚Рѕ С„СѓРЅРєС†РёСЏ РІРѕР·РІСЂР°С‰Р°РµС‚ РµРіРѕ РґРµСЃСЏС‚РёС‡РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ.
+bool is_hex_number(char str[]);	//РџСЂРѕРІРµСЂСЏРµС‚, СЏРІР»СЏРµС‚СЃСЏ Р»Рё СЃС‚СЂРѕРєР° С€РµСЃС‚РЅР°РґС†Р°С‚РµСЂРёС‡РЅС‹Рј С‡РёСЃР»РѕРј
+int  hex_to_dec(char str[]);	//Р•СЃР»Рё СЃС‚СЂРѕРєР° - С€РµСЃС‚РЅР°РґС†Р°С‚РµСЂРёС‡РЅРѕРµ С‡РёСЃР»Рѕ, С‚Рѕ С„СѓРЅРєС†РёСЏ РІРѕР·РІСЂР°С‰Р°РµС‚ РµРіРѕ РґРµСЃСЏС‚РёС‡РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ.
 
 */
 
 int StringLength(char str[]);
 void to_upper(char str[]);
-void shrink(char str[]);		//Удаляет лишние пробелы между словами в предложении
-//Харашо       живьет   на    свете     Винни-Пух
-//Харашо живьет на свете Винни-Пух
+void shrink(char str[]);		//РЈРґР°Р»СЏРµС‚ Р»РёС€РЅРёРµ РїСЂРѕР±РµР»С‹ РјРµР¶РґСѓ СЃР»РѕРІР°РјРё РІ РїСЂРµРґР»РѕР¶РµРЅРёРё
+//РҐР°СЂР°С€Рѕ       Р¶РёРІСЊРµС‚   РЅР°    СЃРІРµС‚Рµ     Р’РёРЅРЅРё-РџСѓС…
+//РҐР°СЂР°С€Рѕ Р¶РёРІСЊРµС‚ РЅР° СЃРІРµС‚Рµ Р’РёРЅРЅРё-РџСѓС…
 //HELLO
+void remove_symbol(char str[], char symbol);
+bool is_palindrome(char str[]);	//РџСЂРѕС‚РѕС‚РёРї С„СѓРЅРєС†РёРё (РћР±СЉСЏРІР»РµРЅРёРµ С„СѓРЅРєС†РёРё - Function declaration)
+bool is_int_number(char str[]);
 
 void main()
 {
-	for(;;)
+	using namespace std;
+	/*for(;;)
 	{
 		cout << "Hello World";
-	}
+	}*/
 	//setlocale(LC_ALL, "Russian");
 	//C char 
-	//ASCII-символ с кодом 0 - '\0'
+	//ASCII-СЃРёРјРІРѕР» СЃ РєРѕРґРѕРј 0 - '\0'
 	//char str[] = { 'H', 'e', 'l', 'l', 'o', 0 };
 	/*char str[] = "Hello World!";
 	cout << str << endl;
@@ -37,27 +41,46 @@ void main()
 
 	//for (int i = 0; i < 256; i++)cout << i << "\t" << (char)i << endl;
 
-	cout << 'A' << "\t" << 'a' << endl;
+	/*cout << 'A' << "\t" << 'a' << endl;
 	cout << (int)'A' << "\t" << (int)'a' << endl;
-	cout << 'A' - 'a' << endl;
+	cout << 'A' - 'a' << endl;*/
 
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
 	const int n = 256;
-	char str[n] = "Харашо       живьет   на    свете     Винни-Пух";
-	//cout << "Введите строку: "; //cin >> str;
-	//cin.getline(str, n);
+	//char str[n] = "РҐР°СЂР°С€Рѕ       Р¶РёРІСЊРµС‚   РЅР°    СЃРІРµС‚Рµ     Р’РёРЅРЅРё-РџСѓС…";
+	char str[n] = "РђСЂРіРµРЅС‚РёРЅР° РјР°РЅРёС‚ РЅРµРіСЂР°";
+	cout << "Р’РІРµРґРёС‚Рµ СЃС‚СЂРѕРєСѓ: "; //cin >> str;
+	cin.getline(str, n);
 	//SetConsoleCP(866);
 	cout << str << endl;
-	cout << typeid(str).name() << endl;
-	cout << StringLength(str) << endl;
+	//cout << typeid(str).name() << endl;
+	//cout << StringLength(str) << endl;
 	//to_upper(str);
 	shrink(str);
 	cout << str << endl;
 
+	//cout << is_palindrome(str) << endl;
+	/*if (is_palindrome(str))
+	{
+		cout << "Р’РІРµРґРµРЅРЅР°СЏ СЃС‚СЂРѕРєР° - РїР°Р»РёРЅРґСЂРѕРј" << endl;
+	}
+	else
+	{
+		cout << "Р’РІРµРґРµРЅРЅР°СЏ СЃС‚СЂРѕРєР° - РќР• РїР°Р»РёРЅРґСЂРѕРј" << endl;
+	}
+	cout << str << endl;*/
+	if (is_int_number(str))
+	{
+		cout << "РЎС‚СЂРѕРєР° - С‡РёСЃР»Рѕ!" << endl;
+	}
+	else
+	{
+		cout << "РЎС‚СЂРѕРєР° - РќР• С‡РёСЃР»Рѕ!" << endl;
+	}
 	/*char* dynamic_string = new char[255];
-	cout << "Введите строку: ";
+	cout << "Р’РІРµРґРёС‚Рµ СЃС‚СЂРѕРєСѓ: ";
 	cin >> dynamic_string;
 	cout << dynamic_string << endl;
 	delete[] dynamic_string;*/
@@ -65,7 +88,7 @@ void main()
 
 int StringLength(char str[])
 {
-	cout << typeid(str).name() << endl;
+	std::cout << typeid(str).name() << std::endl;
 	int i = 0;
 	for (; str[i]; i++);
 	return i;
@@ -76,9 +99,9 @@ void to_upper(char str[])
 	{
 		if (
 			str[i] >= 'a' && str[i] <= 'z' ||
-			str[i] >= 'а' && str[i] <= 'я'
-			)//Если элемент строки - маленькая буква
-			str[i] -= 32;	//то переводим его в верхний регистр.
+			str[i] >= 'Р°' && str[i] <= 'СЏ'
+			)//Р•СЃР»Рё СЌР»РµРјРµРЅС‚ СЃС‚СЂРѕРєРё - РјР°Р»РµРЅСЊРєР°СЏ Р±СѓРєРІР°
+			str[i] -= 32;	//С‚Рѕ РїРµСЂРµРІРѕРґРёРј РµРіРѕ РІ РІРµСЂС…РЅРёР№ СЂРµРіРёСЃС‚СЂ.
 	}
 }
 void shrink(char str[])
@@ -91,4 +114,53 @@ void shrink(char str[])
 				str[j] = str[j + 1];
 		}
 	}
+}
+void remove_symbol(char str[], char symbol)
+{
+	for (int i = 0; str[i]; i++)
+	{
+		while (str[i] == symbol)
+		{
+			for (int j = i; str[j]; j++)
+				str[j] = str[j + 1];
+		}
+	}
+}
+bool is_palindrome(char* str)	//Р РµР°Р»РёР·Р°С†РёСЏ С„СѓРЅРєС†РёРё (РћРїСЂРµРґРµР»РµРЅРёРµ С„СѓРЅРєС†РёРё - Function definition)
+{
+	//int n = StringLength(str);//Р’С‹Р·С‹РІР°РµРј С„СѓРЅРєС†РёСЋ StringLength(), РґР»СЏ С‚РѕРіРѕ С‡С‚РѕР±С‹ РїРѕСЃС‡РёС‚Р°С‚СЊ СЂР°Р·РјРµСЂ СЃС‚СЂРѕРєРё 
+								//(РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ РІ СЃС‚СЂРѕРєРµ)
+	int n = strlen(str);	//Р’СЃС‚СЂРѕРµРЅРЅР°СЏ С„СѓРЅРєС†РёСЏ, РєРѕС‚РѕСЂР°СЏ РІРѕР·РІСЂР°С‰Р°РµС‚ РґР»РёРЅСѓ СЃС‚СЂРѕРєРё РІ СЃРёРјРІРѕР»Р°С…
+								//1) Р”Р»СЏ С‚РѕРіРѕ С‡С‚РѕР±С‹ РёСЃС…РѕРґРЅР°СЏ СЃС‚СЂРѕРєР° РќР• РёР·РјРµРЅРёР»Р°СЃСЊ, СЃРѕР·РґР°РµРј Р±СѓС„РµСЂРЅСѓСЋ СЃС‚СЂРѕРєСѓ
+	char* buffer = new char[n + 1]{};	//{} - РёРЅРёС†РёР°Р»РёР·РёСЂСѓСЋС‚ РІС‹РґРµР»СЏРµРјСѓСЋ РїР°РјСЏС‚СЊ Р·РЅР°С‡РµРЅРёСЏРјРё РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+										//{} - Р·Р°РЅСѓР»СЏСЋС‚ РІС‹РґРµР»СЏРµРјСѓСЋ РїР°РјСЏС‚СЊ
+	//for (int i = 0; i < n; i++)buffer[i] = *(str + i);
+		//buffer[i] = str[i];
+	strcpy(buffer, str);	//Р’СЃС‚СЂРѕРµРЅРЅР°СЏ С„СѓРЅРєС†РёСЏ, РєРѕС‚РѕСЂР°СЏ РєРѕРїРёСЂСѓРµС‚ РѕРґРЅСѓ СЃС‚СЂРѕРєСѓ РІ РґСЂСѓРіСѓСЋ
+	//strcpy(dst, src);	//dst(destination) - СЃС‚СЂРѕРєР° РїРѕР»СѓС‡Р°С‚РµР»СЊ, src(source) - СЃС‚СЂРѕРєР° РёСЃС‚РѕС‡РЅРёРє.
+	//strcpy(РєСѓРґР°, РѕС‚РєСѓРґР°);
+
+	to_upper(buffer);
+	remove_symbol(buffer, ' ');
+	n = StringLength(buffer);
+	for (int i = 0; i < n / 2; i++)
+	{
+		if (buffer[i] != buffer[n - 1 - i])
+		{
+			delete[] buffer;
+			return false;
+		}
+	}
+	delete[] buffer;
+	return true;
+}
+
+bool is_int_number(char str[])
+{
+	for (int i = 0; str[i]; i++)
+	{
+		if (!(str[i] >= '0' && str[i] <= '9'))//Р•РЎР›Р СЌР»РµРјРµРЅС‚ СЃС‚СЂРѕРєРё РќР• С†РёС„СЂР°
+			return false;
+	}
+	return true;
 }
