@@ -1,4 +1,6 @@
-﻿
+﻿https://github.com/okovtun/BV_123
+https://www.youtube.com/watch?v=kJHN4OZAq9w&list=PLeqyOOqxeiIOGly_iU8LhHyPt9re6BE_P
+
 TODO:
 1. Заристрироваться на github.com;
 2. Написать функции:
