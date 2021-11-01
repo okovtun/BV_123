@@ -8,7 +8,11 @@ using namespace std;
 */
 
 //Прототип (Объявление) функции - Function declaration:
-void Exchange(int a, int b/*Принимаемые параметры*/);
+void Exchange(int& a, int& b/*Принимаемые параметры*/);
+void increment(int& a)
+{
+	a++;
+}
 
 void main()
 {
@@ -18,10 +22,11 @@ void main()
 	cout << a << "\t" << b << endl;
 	Exchange(a, b/*передаем параметры в функцию*/);//Вызов функции (Function call)
 	cout << a << "\t" << b << endl;
+
 }
 
 //Реализация (определение) функции - Function definition:
-void Exchange(int a, int b/*Принимаемые параметры*/)
+void Exchange(int& a, int& b/*Принимаемые параметры*/)
 {
 	int buffer = a;
 	a = b;
