@@ -2,6 +2,11 @@
 https://www.youtube.com/watch?v=kJHN4OZAq9w&list=PLeqyOOqxeiIOGly_iU8LhHyPt9re6BE_P
 
 TODO:
+Создать ветку DynamicOverload, и в этой ветке перегрузить функции из предыдущего задания 
+для одномерных и двумерных массивов типа double и char.
+Для каждой функции написать проверочный код.
+
+TODO:
 В Solution Pointers добавить проект DynamicMemory, и в нем реализовать функции:
 void FillRand(???)		//Заполнение массива случайными числами
 void Print(???)			//Вывод массива на экран
