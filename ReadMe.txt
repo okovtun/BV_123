@@ -2,6 +2,9 @@
 https://www.youtube.com/watch?v=kJHN4OZAq9w&list=PLeqyOOqxeiIOGly_iU8LhHyPt9re6BE_P
 
 TODO:
+Провести ревизию и рефакторинг своего кода в проекте DynamicMemory.
+
+DONE:
 Создать ветку DynamicOverload, и в этой ветке перегрузить функции из предыдущего задания 
 для одномерных и двумерных массивов типа double и char.
 Для каждой функции написать проверочный код.
