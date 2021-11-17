@@ -2,6 +2,12 @@
 https://www.youtube.com/watch?v=kJHN4OZAq9w&list=PLeqyOOqxeiIOGly_iU8LhHyPt9re6BE_P
 
 TODO:
+1. В ветке dynamic_templated_split "добить" вынос функций в отдельные файлы;
+2.*** От ветки dynamic_templated создать ветку dynamic_templated_optimisation,
+   и в этой ветке оптимизировать функции для работы с двумерными массивами
+   используя функции для работы с одномерными динамическими массивами.
+
+DONE:
 Провести ревизию и рефакторинг своего кода в проекте DynamicMemory.
 
 DONE:
